@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pokochaj_zwierzaka.apps.PokochajZwierzakaConfig',
+    'pokochaj_zwierzaka.apps.PokochajZwierzakaConfig', # nazwa aplikaci.apps. wartość z pliku apps
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'pok.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# połączenie z postgresem na localhoscie
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

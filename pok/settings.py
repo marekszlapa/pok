@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'pok.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_test',
+        'NAME': 'pokochaj_zwierzaka',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',

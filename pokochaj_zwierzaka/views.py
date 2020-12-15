@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
-# Create your views here.
+#tworzenie widków
 
 def index(request):
 

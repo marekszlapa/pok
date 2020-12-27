@@ -1,11 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
+    <title>Pokochaj Zwierzaka </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
+
 </head>
 <body>
-    <h1>succesful login</h1>
+    <h1>Strona główna</h1>
+
+{% block content %}
+    <div class = "wyloguj">
+{% if user.is_authenticated %}
+  <p> Jesteś zalogowany jako {{ user.username }}! <a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p>Nie jesteś zalogowany <a href="{% url 'index' %}">Log In</a> </p>
+{% endif %}
+    </div>
+{% endblock %}
 </body>
 </html>

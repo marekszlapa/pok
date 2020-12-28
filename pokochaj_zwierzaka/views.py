@@ -17,7 +17,7 @@ def index(request):
             auth.login(request , user)
             return redirect('/home')
         else:
-            messages.info(request, 'invalid username or password')
+            messages.info(request, 'Niewłaściwy login lub hasło')
             return redirect("/")
     else:
         return render(request,'index.html')

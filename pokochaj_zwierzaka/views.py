@@ -34,8 +34,7 @@ def register(request):
 
         user = User.objects.create_user(username = username , password = password , email = email)
         user.save()
-        print('User created')
-        return redirect('/custom')
+        return redirect('/home')
 
     return render(request,'register.html')
 

@@ -17,7 +17,7 @@ def index(request):
             auth.login(request , user)
             return redirect('/home')
         else:
-            messages.info(request, 'invalid username or password')
+            messages.info(request, 'Niewłaściwy login lub hasło')
             return redirect("/")
     else:
         return render(request,'index.html')
@@ -34,8 +34,7 @@ def register(request):
 
         user = User.objects.create_user(username = username , password = password , email = email)
         user.save()
-        print('User created')
-        return redirect('/custom')
+        return redirect('http://127.0.0.1:8000')
 
     return render(request,'register.html')
 

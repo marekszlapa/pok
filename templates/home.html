@@ -1,25 +1,266 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 
-<html lang="en">
+<html lang="pl">
 <head>
-    <title>Pokochaj Zwierzaka </title>
+    <title>Pokochaj Zwierzaka</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
-
+    <script type="text/javascript" src="{% static 'js/glowna.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Strona główna</h1>
 
-{% block content %}
-    <div class = "wyloguj">
-{% if user.is_authenticated %}
-  <p> Jesteś zalogowany jako {{ user.username }}! <a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-  <p>Nie jesteś zalogowany <a href="{% url 'index' %}">Log In</a> </p>
-{% endif %}
+<div class="limiter-nav">
+    <div class="container-nav">
+        <div class="wrap-nav">
+            <div class="nav">
+    <ul>
+        <li>
+            <img src="{% static 'images/lapka.png' %}" alt="IMG">
+        </li>
+        <li>
+            <p>Pokochaj<br>zwierzaka</p>
+        </li>
+        <li><p><a href="#">Baza psów</a></p></li>
+        <li><p><a href="#">Dopasuj do siebie psa</a></p></li>
+        <li>
+            <div class="container-nav-btn">
+                <button class="nav-btn">
+                    <a href="#">Twoje konto</a>
+                </button>
+            </div>
+            <div class="container-nav-btn">
+                <button class="nav-btn">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'index' %}">Wyloguj się</a>
+                    {% else %}
+                        <a href="{% url 'index' %}">Zaloguj się</a>
+                    {% endif %}
+                </button>
+            </div>
+        </li>
+    </ul>
+            </div>
+        </div>
     </div>
-{% endblock %}
+</div>
+
+
+
+<div class="limiter">
+    <div class="container-glowna">
+        <div class="wrap-glowna">
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+            <p>Hejka, inny contence - przeglądanie psów</p>
+        </div>
+    </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="{% static 'images/strzalka.png' %}" alt="IMG">
+</button>
+
 </body>
 </html>

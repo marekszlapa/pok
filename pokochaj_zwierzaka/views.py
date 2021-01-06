@@ -34,7 +34,7 @@ def register(request):
 
         user = User.objects.create_user(username = username , password = password , email = email)
         user.save()
-        return redirect('/home')
+        return redirect('http://127.0.0.1:8000')
 
     return render(request,'register.html')
 

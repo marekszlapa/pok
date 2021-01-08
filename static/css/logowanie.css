@@ -1,27 +1,4 @@
 /*//////////////////////////////////////////////////////////////////
-[ Czcionki ]*/
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
-
-/*//////////////////////////////////////////////////////////////////
 [ style ]*/
 
 * {
@@ -32,7 +9,7 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: sans-serif;
 }
 
 input {
@@ -86,7 +63,6 @@ iframe {
 
 
 .txt2 {
-  font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
   color: #666666;
@@ -161,7 +137,6 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: Poppins-Bold;
   font-size: 35px;
   color: #333333;
   line-height: 1.2;
@@ -182,7 +157,6 @@ iframe {
 }
 
 .input100 {
-  font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -209,7 +183,6 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
@@ -298,7 +271,6 @@ iframe {
   right: 8px;
   pointer-events: none;
 
-  font-family: Poppins-Medium;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -315,7 +287,6 @@ iframe {
 
 .alert-validate::after {
   content: "\f06a";
-  font-family: FontAwesome;
   display: block;
   position: absolute;
   color: #c80000;

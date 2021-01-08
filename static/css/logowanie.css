@@ -2,14 +2,16 @@
 [ style ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
+    font-weight: bold;
 }
 
 body, html {
 	height: 100%;
-	font-family: sans-serif;
+	font-family: Poppins, sans-serif;
+
 }
 
 input {
@@ -63,6 +65,7 @@ iframe {
 
 
 .txt2 {
+  font-family: Poppins;
   font-size: 13px;
   line-height: 1.5;
   color: #666666;
@@ -88,7 +91,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -137,6 +140,7 @@ iframe {
 }
 
 .login100-form-title {
+  font-family: Poppins;
   font-size: 35px;
   color: #333333;
   line-height: 1.2;
@@ -157,6 +161,7 @@ iframe {
 }
 
 .input100 {
+  font-family: Poppins;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -183,6 +188,7 @@ iframe {
 }
 
 .login100-form-btn {
+  font-family: Montserrat;
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
@@ -271,6 +277,7 @@ iframe {
   right: 8px;
   pointer-events: none;
 
+  font-family: Poppins;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -287,6 +294,7 @@ iframe {
 
 .alert-validate::after {
   content: "\f06a";
+  font-family: FontAwesome;
   display: block;
   position: absolute;
   color: #c80000;

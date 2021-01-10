@@ -45,3 +45,6 @@ def custom(request):
 
 def home(request):
     return render(request, 'home.html')
+
+def profil(request):
+    return render(request, 'profile.html')

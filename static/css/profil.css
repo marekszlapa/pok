@@ -217,7 +217,7 @@ body, html {
 
 .wrapper .right .info_data .data,
 .wrapper .right .projects_data .data{
-  width: 45%;
+  width: 100%;
 }
 
 .wrapper .right .info_data .data h4,

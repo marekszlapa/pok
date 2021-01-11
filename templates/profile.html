@@ -76,12 +76,23 @@
                     <h5>{{ user.email }}</h5>
                      <h6><a href="{% url 'logout' %}">Wyloguj się</a></h6>
                      {% if request.user.groups.all.0.name != 'schronisko' %}
-                            <li><p><a href="{% url 'home' %}">Podanie o nadanie praw schroniska</a></p></li>
+                            <li>
+                                 <button id="schroniska">Kontakt dla schronisk</button>
+                                 <p id="tresc"></p>
+                            </li>
                      {% endif %}
                  </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    var s= document.getElementById('schroniska'),
+        tresc = document.getElementById('tresc');
+
+    s.onclick = function() {
+        tresc.innerHTML = 'Aby uzyskać prawa do dodawania psów skontaktuj sie z nami pod adresem e-mail: pokzwierzaka@gmail.com lub telefonicznie tel: xxx-xxx-xxx';
+    }
+</script>
 </body>
 </html>

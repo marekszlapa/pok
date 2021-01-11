@@ -29,8 +29,8 @@
 * zalogować się jako superużytkownik
 * dodać nową grupę "schronisko"
 * nadać jej wszytkie uprawnienia: 
-  > contenttypes
-  > pokochaj_zwierzaka
+  - contenttypes
+  - pokochaj_zwierzaka
 * zapisać
 
 **Nadawanie uprwanień użytkownikowi**

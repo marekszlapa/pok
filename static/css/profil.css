@@ -45,14 +45,19 @@ body, html {
   font-weight: normal;
 }
 .nav ul li:nth-child(2){
-  margin-right: 90px
+  margin-right: 100px
 }
 .nav ul li:nth-child(3), .nav ul li:nth-child(4){
   margin-top: 20px;
 }
 
-.nav ul li:nth-child(4){
+.nav ul div{
+  margin-top: 20px;
   margin-right: 90px;
+}
+
+.nav ul li div{
+    margin-top: 10px;
 }
 
 .limiter-nav {
@@ -161,7 +166,7 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 450px;
+  width: 60%;
   display: flex;
   box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
 }

@@ -73,10 +73,10 @@ def create_dog(request):
             new_dog = Dog(born=born,breed=breed,name=name,character=character,special_needs=special_needs,
                           diseases=diseases,shelter_stay=shelter_stay,shelter=shelter)
             new_dog.save()
-            messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
-            return redirect('/profile')
+            #messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
+            return redirect('/twoje_psy')
     else:
         create_dog_form = CreateDogForm()
-        messages.info(request, 'Nie udało się dodać nowego psa do bazy')
+        #messages.info(request, 'Nie udało się dodać nowego psa do bazy')
 
     return render(request, 'create_dog.html',{'create_dog_form':create_dog_form})

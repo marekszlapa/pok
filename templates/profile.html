@@ -30,7 +30,9 @@
         <li><p><a href="{% url 'home' %}">Baza psów</a></p></li>
         {% if request.user.groups.all.0.name == 'schronisko' %}
             <li><p><a href="{% url 'create_dog' %}">Dodaj psa</a></p></li>
-            <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
+            <div>
+                <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
+            </div>
             {% else %}
             <li><p><a href="{% url 'matching' %}">Dopasuj do siebie psa</a></p></li>
         {% endif %}

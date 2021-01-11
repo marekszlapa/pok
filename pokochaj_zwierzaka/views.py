@@ -54,6 +54,9 @@ def profil(request):
 def matching(request):
     return render(request, 'matching.html')
 
+def twoje_psy(request):
+    return render(request, 'twoje_psy.html')
+
 def create_dog(request):
     if request.method == 'POST':
         create_dog_form = CreateDogForm(request.POST)

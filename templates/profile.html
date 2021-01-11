@@ -58,7 +58,7 @@
         <img src="{% static 'images/user.png' %}" alt="IMG"
         alt="user" width="100">
         <h4></h4>
-         <p><h2>Witaj {{ user.username }}!<h2></h2></p>
+         <p><h2>Witaj {{ user.username }}!</h2></p>
     </div>
     <div class="right">
         <div class="info">
@@ -68,6 +68,9 @@
                     <h4>Email</h4>
                     <h5>{{ user.email }}</h5>
                      <h6><a href="{% url 'logout' %}">Wyloguj się</a></h6>
+                     {% if request.user.groups.all.0.name != 'schronisko' %}
+                            <li><p><a href="{% url 'home' %}">Podanie o nadanie praw schroniska</a></p></li>
+                     {% endif %}
                  </div>
             </div>
         </div>

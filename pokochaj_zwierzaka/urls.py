@@ -9,4 +9,6 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('profile', views.profil, name='profile'),
+    path('matching', views.matching, name='matching'),
+    path('create_dog', views.create_dog, name='create_dog')
 ]

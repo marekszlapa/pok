@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>POK Dodaj psa</title>
+</head>
+<body>
+<table>
+<form method="post">
+    {% csrf_token %}
+    {{ create_dog_form.as_table }}
+    <input type="submit" value="Create">
+</form>
+</table>
+</body>
+</html>

@@ -45,51 +45,19 @@ body, html {
   font-weight: normal;
 }
 .nav ul li:nth-child(2){
-  margin-right: 90px
+  margin-right: 100px
 }
 .nav ul li:nth-child(3), .nav ul li:nth-child(4){
   margin-top: 20px;
 }
 
-.nav ul li:nth-child(4){
+.nav ul div{
+  margin-top: 20px;
   margin-right: 90px;
 }
 
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-glowna {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #e3d3ab;
-}
-
-.wrap-glowna {
-  margin-top: 130px;
-  width: 1200px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 15px 15px 15px 15px;
-
+.nav ul li div{
+    margin-top: 10px;
 }
 
 .limiter-nav {
@@ -191,9 +159,6 @@ body, html {
 #myBtn:hover {
   background-color: #333333; /* Add a dark-grey background on hover */
 }
-body{
-   background-color: #f3f3f3;
-}
 
 
 .wrapper{
@@ -201,9 +166,9 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 450px;
+  width: 60%;
   display: flex;
-  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+  box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
 }
 
 .wrapper .left{
@@ -252,7 +217,7 @@ body{
 
 .wrapper .right .info_data .data,
 .wrapper .right .projects_data .data{
-  width: 45%;
+  width: 100%;
 }
 
 .wrapper .right .info_data .data h4,
@@ -260,4 +225,3 @@ body{
     color: #353c4e;
     margin-bottom: 5px;
 }
-

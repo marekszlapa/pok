@@ -3,10 +3,12 @@
 
 <html lang="pl">
 <head>
-    <title>Pokochaj Zwierzaka Strona Główna</title>
+    <title>POK Profil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/profil.css' %}">
+    <link rel="icon" href="{% static 'images/lapka.png' %}">
     <script type="text/javascript" src="{% static 'js/profil.js' %}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -25,8 +27,15 @@
         <li>
             <p>Pokochaj<br>zwierzaka</p>
         </li>
-        <li><p><a href="#">Baza psów</a></p></li>
-        <li><p><a href="#">Dopasuj do siebie psa</a></p></li>
+        <li><p><a href="{% url 'home' %}">Baza psów</a></p></li>
+        {% if request.user.groups.all.0.name == 'schronisko' %}
+            <li><p><a href="{% url 'create_dog' %}">Dodaj psa</a></p></li>
+            <div>
+                <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
+            </div>
+            {% else %}
+            <li><p><a href="{% url 'matching' %}">Dopasuj do siebie psa</a></p></li>
+        {% endif %}
         <li>
             <div class="container-nav-btn">
                 <button class="nav-btn">
@@ -51,14 +60,12 @@
     </div>
 </div>
 
-
-
 <div class="wrapper">
     <div class="left">
         <img src="{% static 'images/user.png' %}" alt="IMG"
         alt="user" width="100">
         <h4></h4>
-         <p><h2>Witaj {{ user.username }}!<h2></h2></p>
+         <p><h2>Witaj {{ user.username }}!</h2></p>
     </div>
     <div class="right">
         <div class="info">
@@ -67,11 +74,25 @@
                  <div class="data">
                     <h4>Email</h4>
                     <h5>{{ user.email }}</h5>
-                     <h6><a href="{% url 'logout' %}">Wyloguj się</a></p></h6>
+                     <h6><a href="{% url 'logout' %}">Wyloguj się</a></h6>
+                     {% if request.user.groups.all.0.name != 'schronisko' %}
+                            <li>
+                                 <button id="schroniska">Kontakt dla schronisk</button>
+                                 <p id="tresc"></p>
+                            </li>
+                     {% endif %}
                  </div>
             </div>
         </div>
+    </div>
+</div>
+<script>
+    var s= document.getElementById('schroniska'),
+        tresc = document.getElementById('tresc');
 
-
+    s.onclick = function() {
+        tresc.innerHTML = 'Aby uzyskać prawa do dodawania psów skontaktuj sie z nami pod adresem e-mail: pokzwierzaka@gmail.com lub telefonicznie tel: xxx-xxx-xxx';
+    }
+</script>
 </body>
 </html>

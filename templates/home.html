@@ -1,12 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
-    <title>Pokochaj Zwierzaka Strona Główna</title>
+    <title>POK Strona Główna</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
+    <link rel="icon" href="{% static 'images/lapka.png' %}">
     <script type="text/javascript" src="{% static 'js/glowna.js' %}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -25,8 +25,15 @@
         <li>
             <p>Pokochaj<br>zwierzaka</p>
         </li>
-        <li><p><a href="#">Baza psów</a></p></li>
-        <li><p><a href="#">Dopasuj do siebie psa</a></p></li>
+        <li><p><a href="{% url 'home' %}">Baza psów</a></p></li>
+        {% if request.user.groups.all.0.name == 'schronisko' %}
+            <li><p><a href="{% url 'create_dog' %}">Dodaj psa</a></p></li>
+            <div>
+                <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
+            </div>
+            {% else %}
+            <li><p><a href="{% url 'matching' %}">Dopasuj do siebie psa</a></p></li>
+        {% endif %}
         <li>
             <div class="container-nav-btn">
                 <button class="nav-btn">
@@ -56,6 +63,7 @@
 <div class="limiter">
     <div class="container-glowna">
         <div class="wrap-glowna">
+            <a href="{% url 'create_dog' %}">Dodawanie psa do bazy</a>
             <p>Hejka, inny contence - przeglądanie psów</p>
             <p>Hejka, inny contence - przeglądanie psów</p>
             <p>Hejka, inny contence - przeglądanie psów</p>

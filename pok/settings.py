@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'pok.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pokochaj_zwierzaka',
+        'NAME': 'pokochaj_zwierzaka_2',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST':'localhost',

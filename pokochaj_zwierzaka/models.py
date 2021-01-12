@@ -15,17 +15,17 @@ class Dog(models.Model):
         ('BF', 'buldog francuski'),
     )
 
-    born = models.DateField()
-    breed = models.CharField(max_length=2, choices=BREEDS_AVAILABLE)
-    name = models.CharField(max_length=30)
-    character = models.TextField(max_length=1024)
-    special_needs = models.TextField(max_length=1024, null=True, default=None, blank=True)
-    diseases = models.TextField(max_length=1024, null=True, default=None, blank=True)
-    shelter_stay = models.DateField()
+    data_urodzenia = models.DateField()
+    rasa = models.CharField(max_length=2, choices=BREEDS_AVAILABLE)
+    imie = models.CharField(max_length=30)
+    charakter = models.TextField(max_length=1024)
+    specjalne_potrzeby = models.TextField(max_length=1024, null=True, default=None, blank=True)
+    choroby = models.TextField(max_length=1024, null=True, default=None, blank=True)
+    pobyt_w_schronisku = models.DateField()
     shelter = models.ForeignKey(User, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='static/images/dogsphotos/', null=True, default=None, blank=True)
+    fotografia = models.ImageField(upload_to='static/images/dogsphotos/', null=True, default=None, blank=True)
 
 
     def __str__(self):
-        return self.name
+        return self.imie
 

@@ -18,46 +18,45 @@
     <div class="container-nav">
         <div class="wrap-nav">
             <div class="nav">
-    <ul>
-        <li>
-            <img src="{% static 'images/lapka.png' %}" alt="IMG">
-        </li>
-        <li>
-            <p>Pokochaj<br>zwierzaka</p>
-        </li>
-        <li><p><a href="{% url 'home' %}">Baza psów</a></p></li>
-        {% if request.user.groups.all.0.name == 'schronisko' %}
-            <li><p><a href="{% url 'create_dog' %}">Dodaj psa</a></p></li>
-            <div>
-                <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
-            </div>
-            {% else %}
-            <li><p><a href="{% url 'matching' %}">Dopasuj do siebie psa</a></p></li>
-        {% endif %}
-        <li>
-            <div class="container-nav-btn">
-                <button class="nav-btn">
-                    <a href="profile">Twoje konto</a>
-                </button>
-            </div>
-            <div class="container-nav-btn">
-                <button class="nav-btn">
-                    {%  block content %}
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'logout' %}">Wyloguj się</a>
-                        {% else %}
-                            <a href="{% url 'index' %}">Zaloguj się</a>
-                        {% endif %}
-                    {%  endblock %}
-                </button>
-            </div>
-        </li>
-    </ul>
+                <ul>
+                    <li>
+                        <img src="{% static 'images/lapka.png' %}" alt="IMG">
+                    </li>
+                    <li>
+                        <p>Pokochaj<br>zwierzaka</p>
+                    </li>
+                    <li><p><a href="{% url 'home' %}">Baza psów</a></p></li>
+                    {% if request.user.groups.all.0.name == 'schronisko' %}
+                        <li><p><a href="{% url 'create_dog' %}">Dodaj psa</a></p></li>
+                        <div>
+                            <li><p><a href="{% url 'twoje_psy' %}">Twoje psy</a></p></li>
+                        </div>
+                    {% else %}
+                        <li><p><a href="{% url 'matching' %}">Dopasuj do siebie psa</a></p></li>
+                    {% endif %}
+                    <li>
+                        <div class="container-nav-btn">
+                            <button class="nav-btn">
+                                <a href="profile">Twoje konto</a>
+                            </button>
+                        </div>
+                        <div class="container-nav-btn">
+                            <button class="nav-btn">
+                                {% block content %}
+                                    {% if user.is_authenticated %}
+                                        <a href="{% url 'logout' %}">Wyloguj się</a>
+                                    {% else %}
+                                        <a href="{% url 'index' %}">Zaloguj się</a>
+                                    {% endif %}
+                                {% endblock %}
+                            </button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <div class="limiter">

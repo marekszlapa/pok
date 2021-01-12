@@ -63,17 +63,17 @@ def create_dog(request):
     if request.method == 'POST':
         create_dog_form = CreateDogForm(request.POST, request.FILES)
         if create_dog_form.is_valid():
-            born = create_dog_form.cleaned_data['born']
-            breed = create_dog_form.cleaned_data['breed']
-            name = create_dog_form.cleaned_data['name']
-            character = create_dog_form.cleaned_data['character']
-            special_needs = create_dog_form.cleaned_data['special_needs']
-            diseases = create_dog_form.cleaned_data['diseases']
+            data_urodzenia = create_dog_form.cleaned_data['data_urodzenia']
+            rasa = create_dog_form.cleaned_data['rasa']
+            imie = create_dog_form.cleaned_data['imie']
+            charakter = create_dog_form.cleaned_data['charakter']
+            specjalne_potrzeby = create_dog_form.cleaned_data['specjalne_potrzeby']
+            choroby = create_dog_form.cleaned_data['choroby']
             shelter = request.user
-            shelter_stay = create_dog_form.cleaned_data['shelter_stay']
-            photo = create_dog_form.cleaned_data['photo']
-            new_dog = Dog(born=born, breed=breed, name=name, character=character, special_needs=special_needs,
-                          diseases=diseases, shelter_stay=shelter_stay, shelter=shelter, photo=photo)
+            pobyt_w_schronisku = create_dog_form.cleaned_data['pobyt_w_schronisku']
+            fotografia = create_dog_form.cleaned_data['fotografia']
+            new_dog = Dog(data_urodzenia=data_urodzenia, rasa=rasa, imie=imie, charakter=charakter, specjalne_potrzeby=specjalne_potrzeby,
+                          choroby=choroby, pobyt_w_schronisku=pobyt_w_schronisku, shelter=shelter, fotografia=fotografia)
             new_dog.save()
             # messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
             return redirect('/twoje_psy')

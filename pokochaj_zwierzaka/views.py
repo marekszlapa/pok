@@ -31,12 +31,16 @@ def register(request):
         email = request.POST['email']
         username = request.POST['username']
         password = request.POST['password']
-
-        user = User.objects.create_user(username=username, password=password, email=email)
-        user.save()
+        user = auth.authenticate(username=username, password=password, email=email)
+        if user is not None:
+            messages.info(request, 'Niewłaściwy login lub hasło')
+            return render(request, 'register.html')
+        else:
+            user = User.objects.create_user(username=username, password=password, email=email)
+            user.save()
         return redirect('http://127.0.0.1:8000')
-
-    return render(request, 'register.html')
+    else:
+        return render(request, 'register.html')
 
 
 def custom(request):

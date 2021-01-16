@@ -33,7 +33,7 @@ def register(request):
         password = request.POST['password']
         user = auth.authenticate(username=username, password=password, email=email)
         if user is not None:
-            messages.info(request, 'Niewłaściwy login lub hasło')
+            messages.info(request, 'Ten użytkownik już istnieje')
             return render(request, 'register.html')
         else:
             user = User.objects.create_user(username=username, password=password, email=email)

@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import Dog
+from .models import Dog, Dopasowanie
 import datetime
 
 
@@ -18,4 +18,17 @@ class CreateDogForm(ModelForm):
             'specjalne_potrzeby': forms.Textarea(attrs={'class': 'form-control'}),
             'choroby': forms.Textarea(attrs={'class': 'form-control'})
 
+        }
+
+class CreateDopasowanieForm(ModelForm):
+    class Meta:
+        model = Dopasowanie
+        fields = ['wiek_psa', 'rasa_psa', 'czas_pobytu_w_schronisku', 'pies_ze_specjalnymi_wymaganiami',
+                  'pies_z_chorobami']
+        widgets = {
+            'wiek_psa': forms.Select(attrs={'class': 'form-control'}),
+            'rasa_psa': forms.Select(attrs={'class': 'form-control'}),
+            'czas_pobytu_w_schronisku': forms.Select(attrs={'class': 'form-control'}),
+            'pies_ze_specjalnymi_wymaganiami': forms.Select(attrs={'class': 'form-control'}),
+            'pies_z_chorobami': forms.Select(attrs={'class': 'form-control'})
         }

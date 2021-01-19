@@ -182,7 +182,14 @@ body, html {
   border-radius: 30px;
   font-size: 18px;
 }
-
+.zdj{
+  width: 250px;
+  height: 200px;
+}
+.zdj img{
+  max-width: 250px;
+  max-height: 200px;
+}
 #myBtn img{
   position: absolute;
   width: 40px;

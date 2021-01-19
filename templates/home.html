@@ -64,17 +64,21 @@
         <div class="wrap-glowna">
 
            {% for item in all %}
+               <div class="zdj">
+                    <img src="{{ item.fotografia }}"> <br>
+               </div>
+               <div class="dogs-glowna">
                Imie: {{ item.imie }} <br>
-               Data Urodzenia: {{ item.data_urodzenia }} <br>
+               Data urodzenia: {{ item.data_urodzenia }} <br>
                Rasa: {{ item.rasa }} <br>
                Charakter: {{ item.charakter }} <br>
                Specjalne potrzeby: {{ item.specjalne_potrzeby }} <br>
                Choroby: {{ item.choroby }} <br>
                Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
                Schronisko: {{ item.shelter }} <br>
-               <div class="zdj">
-                    <img src="{{ item.fotografia }}"> <br>
+                   <hr>
                </div>
+
             {% endfor %}
         </div>
     </div>

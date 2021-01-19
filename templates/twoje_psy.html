@@ -62,9 +62,12 @@
 <div class="limiter">
     <div class="container-glowna">
         <div class="wrap-glowna">
-
            {% for item in all %}
                     {% if item.shelter_id == user.id %}
+                        <div class="zdj">
+                            <img src="{{ item.fotografia }}"> <br>
+                        </div>
+                        <div class="dogs-glowna">
                         Imie: {{ item.imie }} <br>
                         Data Urodzenia: {{ item.data_urodzenia }} <br>
                         Rasa: {{ item.rasa }} <br>
@@ -73,8 +76,7 @@
                         Choroby: {{ item.choroby }} <br>
                         Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
                         Schronisko: {{ item.shelter }} <br>
-                        <div class="zdj">
-                            <img src="{{ item.fotografia }}"> <br>
+                        <hr>
                         </div>
                     {% endif %}
                 {% endfor %}

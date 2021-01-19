@@ -1,0 +1,211 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Poppins, sans-serif;
+  background: #e3d3ab;
+}
+
+.dogs-glowna {
+  width: 75%;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+
+.nav{
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-color: #c87a68;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.nav ul{
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.nav ul li{
+  display: inline-block;
+}
+.nav ul li p{
+  padding: 0;
+  font-weight: 900;
+  font-size: 30px;
+  color: black;
+  margin-top: 8px;
+  margin-right: 50px;
+}
+.nav ul li img{
+  width: 100px;
+}
+.nav ul li p a{
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+}
+.nav ul li:nth-child(2){
+  margin-right: 100px;
+}
+.nav ul li:nth-child(3), .nav ul li:nth-child(4){
+  margin-top: 20px;
+}
+
+.nav ul div{
+  margin-top: 20px;
+  margin-right: 90px;
+}
+
+.nav ul li div{
+    margin-top: 10px;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-glowna {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #e3d3ab;
+}
+
+.wrap-glowna {
+  margin-top: 130px;
+  width: 1200px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 15px 15px 15px;
+
+}
+
+.limiter-nav {
+  width: 100%;
+  position: fixed;
+  margin: 0 auto;
+}
+
+.container-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  padding-top: 0px;
+  background: transparent;
+}
+.zdj{
+  width: 250px;
+  height: 200px;
+}
+.zdj img{
+  max-width: 250px;
+  max-height: 200px;
+}
+.wrap-nav {
+  width: 1400px;
+  background: #c87a68;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0;
+  box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
+}
+
+.container-nav-btn {
+  width: 150px;
+  margin-top: 9px;
+}
+
+.nav-btn {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  background: #c87a68;
+  padding: 0;
+  cursor: pointer;
+}
+.nav-btn a{
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.nav-btn:hover {
+  background: #333333;
+}
+
+#myBtn {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 40px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #c87a68; /* Set a background color */
+  font-size: 16px;
+  height: 60px;
+  width: 60px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  color: white; /* Text color */
+  cursor: pointer;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+#myBtn img{
+  position: absolute;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#myBtn:hover {
+  background-color: #333333; /* Add a dark-grey background on hover */
+}

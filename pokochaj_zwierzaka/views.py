@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
-from .models import Dog
-from .forms import CreateDogForm
+from .models import Dog, Dopasowanie
+from .forms import CreateDogForm, CreateDopasowanieForm
 
 
 # tworzenie widków
@@ -72,8 +72,10 @@ def create_dog(request):
             shelter = request.user
             pobyt_w_schronisku = create_dog_form.cleaned_data['pobyt_w_schronisku']
             fotografia = create_dog_form.cleaned_data['fotografia']
-            new_dog = Dog(data_urodzenia=data_urodzenia, rasa=rasa, imie=imie, charakter=charakter, specjalne_potrzeby=specjalne_potrzeby,
-                          choroby=choroby, pobyt_w_schronisku=pobyt_w_schronisku, shelter=shelter, fotografia=fotografia)
+            new_dog = Dog(data_urodzenia=data_urodzenia, rasa=rasa, imie=imie, charakter=charakter,
+                          specjalne_potrzeby=specjalne_potrzeby,
+                          choroby=choroby, pobyt_w_schronisku=pobyt_w_schronisku, shelter=shelter,
+                          fotografia=fotografia)
             new_dog.save()
             # messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
             return redirect('/twoje_psy')
@@ -82,3 +84,26 @@ def create_dog(request):
         # messages.info(request, 'Nie udało się dodać nowego psa do bazy')
 
     return render(request, 'create_dog.html', {'create_dog_form': create_dog_form})
+
+
+def matching(request):
+    if request.method == 'POST':
+        create_dopasowanie_form = CreateDopasowanieForm(request.POST)
+        if create_dopasowanie_form.is_valid():
+            wiek_psa = create_dopasowanie_form.cleaned_data['wiek_psa']
+            rasa_psa = create_dopasowanie_form.cleaned_data['rasa_psa']
+            czas_pobytu_w_schronisku = create_dopasowanie_form.cleaned_data['czas_pobytu_w_schronisku']
+            pies_ze_specjalnymi_wymaganiami = create_dopasowanie_form.cleaned_data['pies_ze_specjalnymi_wymaganiami']
+            pies_z_chorobami = create_dopasowanie_form.cleaned_data['pies_z_chorobami']
+            uzytkownik = request.user
+            new_dopasowanie = Dopasowanie(wiek_psa=wiek_psa, rasa_psa=rasa_psa, czas_pobytu_w_schronisku=czas_pobytu_w_schronisku,
+                                          pies_ze_specjalnymi_wymaganiami=pies_ze_specjalnymi_wymaganiami, pies_z_chorobami=pies_z_chorobami,
+                                          uzytkownik=uzytkownik)
+            new_dopasowanie.save()
+            # messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
+            return redirect('/home')
+    else:
+        create_dopasowanie_form = CreateDopasowanieForm()
+        # messages.info(request, 'Nie udało się dodać nowego psa do bazy')
+
+    return render(request, 'matching.html', {'create_dopasowanie_form': create_dopasowanie_form})

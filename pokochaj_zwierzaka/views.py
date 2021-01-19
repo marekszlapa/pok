@@ -48,7 +48,8 @@ def custom(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    all_dogs = Dog.objects.all
+    return render(request, 'home.html', {'all': all_dogs})
 
 
 def profil(request):

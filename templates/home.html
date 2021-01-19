@@ -72,7 +72,9 @@
                Choroby: {{ item.choroby }} <br>
                Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
                Schronisko: {{ item.shelter }} <br>
-               Fotografia: <img src="{{ item.fotografia }}"> <br>
+               <div class="zdj">
+                    <img src="{{ item.fotografia }}"> <br>
+               </div>
             {% endfor %}
         </div>
     </div>

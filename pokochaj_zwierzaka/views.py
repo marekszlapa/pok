@@ -61,7 +61,8 @@ def matching(request):
 
 
 def twoje_psy(request):
-    return render(request, 'twoje_psy.html')
+    all_dogs = Dog.objects.all
+    return render(request, 'twoje_psy.html', {'all': all_dogs})
 
 
 def create_dog(request):

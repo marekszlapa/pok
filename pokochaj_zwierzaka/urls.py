@@ -14,5 +14,5 @@ urlpatterns = [
     path('twoje_psy', views.twoje_psy, name='twoje_psy'),
     path('create_dog', views.create_dog, name='create_dog'),
     #path('password/', auth_views.PasswordChangeView.as_view(template_name='change-password.html'))
-    path('password/', views.PasswordChangeView.as_view(template_name='change-password.html'))
+    path('password/', views.PasswordChangeView.as_view(template_name='change-password.html') , name='password')
 ]

@@ -65,7 +65,8 @@
 
            {% for item in all %}
                <div class="zdj">
-                    <img src="{{ item.fotografia }}"> <br>
+                    <img src="{{ item.fotografia }}" onclick="powieksz(this)" id="img1"   />
+                            <button onclick="reset()">Reset</button><br><br>
                </div>
                <div class="dogs-glowna">
                Imie: {{ item.imie }} <br>
@@ -88,6 +89,19 @@
 <button onclick="topFunction()" id="myBtn" title="Go to top">
     <img src="{% static 'images/strzalka.png' %}" alt="IMG">
 </button>
+
+       <script>
+
+            function powieksz(img) {
+                img.style.transform = "translateX(500px) scale(2.5)";
+                img.style.transition = "transform 0.5s ease";
+            }
+            //nie dziala to
+            function reset(){
+            document.getElementById("img1").style.transform = "translateX(-500px) scale(1)";
+            document.getElementById("img1").style.transition = "transform 0.5s ease";
+            }
+        </script>
 
 </body>
 </html>

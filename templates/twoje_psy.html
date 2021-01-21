@@ -5,7 +5,7 @@
     <title>POK Strona Główna</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/twoje_psy.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
     <link rel="icon" href="{% static 'images/lapka.png' %}">
     <script type="text/javascript" src="{% static 'js/glowna.js' %}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -65,7 +65,8 @@
            {% for item in all %}
                     {% if item.shelter_id == user.id %}
                         <div class="zdj">
-                            <img src="{{ item.fotografia }}"> <br>
+                            <img src="{{ item.fotografia }}" onclick="powieksz(this)" id="img1"   />
+                            <button onclick="reset()">Reset</button><br>
                         </div>
                         <div class="dogs-glowna">
                         Imie: {{ item.imie }} <br>
@@ -93,6 +94,17 @@
 {% else %}
     <h6>Niestety nie masz dostępu do tej strony</h6>
 {% endif %}
+        <script>
 
+            function powieksz(img) {
+                img.style.transform = "translateX(500px) scale(2.5)";
+                img.style.transition = "transform 0.5s ease";
+            }
+            //nie dziala
+            function reset(){
+            document.getElementById("img1").style.transform = "translateX(-500px) scale(1)";
+            document.getElementById("img1").style.transition = "transform 0.5s ease";
+            }
+        </script>
 </body>
 </html>

@@ -64,10 +64,11 @@
         <div class="wrap-glowna">
            {% for item in all %}
                     {% if item.shelter_id == user.id %}
-                        <div class="zdj">
-                            <img src="{{ item.fotografia }}" onclick="powieksz(this)" id="img1"   />
-                            <button onclick="reset()">Reset</button><br>
-                        </div>
+                       <div class="zdj">
+                           <a target="_blank" href="{{ item.fotografia }}">
+                                        <img src="{{ item.fotografia }}"/><br>
+                           </a>
+                       </div>
                         <div class="dogs-glowna">
                         Imie: {{ item.imie }} <br>
                         Data Urodzenia: {{ item.data_urodzenia }} <br>
@@ -94,17 +95,5 @@
 {% else %}
     <h6>Niestety nie masz dostępu do tej strony</h6>
 {% endif %}
-        <script>
-
-            function powieksz(img) {
-                img.style.transform = "translateX(500px) scale(2.5)";
-                img.style.transition = "transform 0.5s ease";
-            }
-            //nie dziala
-            function reset(){
-            document.getElementById("img1").style.transform = "translateX(-500px) scale(1)";
-            document.getElementById("img1").style.transition = "transform 0.5s ease";
-            }
-        </script>
 </body>
 </html>

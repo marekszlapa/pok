@@ -130,6 +130,9 @@ body, html {
 .zdj img{
   max-width: 250px;
   max-height: 200px;
+  width: auto;
+  height: auto;
+
 }
 .wrap-nav {
   width: 1400px;
@@ -209,3 +212,9 @@ body, html {
 #myBtn:hover {
   background-color: #333333; /* Add a dark-grey background on hover */
 }
+.zdj img:hover{
+  transform: scale(1.3);
+  z-index: 100;
+  position: absolute;
+}
+

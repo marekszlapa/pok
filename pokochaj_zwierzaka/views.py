@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import PasswordChangeForm
 from .models import Dog, Dopasowanie
-from .forms import CreateDogForm, CreateDopasowanieForm
+from .forms import CreateDogForm, CreateDopasowanieForm, PasswordChangingForm
+from django.urls import reverse_lazy
 
 
 # tworzenie widków
@@ -102,8 +104,10 @@ def matching(request):
             pies_ze_specjalnymi_wymaganiami = create_dopasowanie_form.cleaned_data['pies_ze_specjalnymi_wymaganiami']
             pies_z_chorobami = create_dopasowanie_form.cleaned_data['pies_z_chorobami']
             uzytkownik = request.user
-            new_dopasowanie = Dopasowanie(wiek_psa=wiek_psa, rasa_psa=rasa_psa, czas_pobytu_w_schronisku=czas_pobytu_w_schronisku,
-                                          pies_ze_specjalnymi_wymaganiami=pies_ze_specjalnymi_wymaganiami, pies_z_chorobami=pies_z_chorobami,
+            new_dopasowanie = Dopasowanie(wiek_psa=wiek_psa, rasa_psa=rasa_psa,
+                                          czas_pobytu_w_schronisku=czas_pobytu_w_schronisku,
+                                          pies_ze_specjalnymi_wymaganiami=pies_ze_specjalnymi_wymaganiami,
+                                          pies_z_chorobami=pies_z_chorobami,
                                           uzytkownik=uzytkownik)
             new_dopasowanie.save()
             # messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
@@ -113,3 +117,9 @@ def matching(request):
         # messages.info(request, 'Nie udało się dodać nowego psa do bazy')
 
     return render(request, 'matching.html', {'create_dopasowanie_form': create_dopasowanie_form})
+
+
+class PasswordChangeView(PasswordChangeView):
+    #form_class = PasswordChangeForm
+    form_class = PasswordChangingForm
+    success_url = reverse_lazy('home')

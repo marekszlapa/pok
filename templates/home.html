@@ -65,7 +65,9 @@
 
            {% for item in all %}
                <div class="zdj">
-                    <img src="{{ item.fotografia }}"> <br>
+                   <a target="_blank" href="{{ item.fotografia }}">
+                                <img src="{{ item.fotografia }}"/><br>
+                   </a>
                </div>
                <div class="dogs-glowna">
                Imie: {{ item.imie }} <br>
@@ -88,6 +90,6 @@
 <button onclick="topFunction()" id="myBtn" title="Go to top">
     <img src="{% static 'images/strzalka.png' %}" alt="IMG">
 </button>
-
+</div>
 </body>
 </html>

@@ -40,7 +40,7 @@
   - pokochaj_zwierzaka
 * zapisać
 
-**Nadawanie uprwanień użytkownikowi**
+**Nadawanie uprawnień użytkownikowi**
 * należy uruchomić program 
 * w przeglądarce należy otworzyć zakładkę http://127.0.0.1:8000/admin
 * zalogować się jako superużytkownik
